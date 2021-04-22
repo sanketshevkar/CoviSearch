@@ -11,6 +11,7 @@ function App() {
     oxygen: false,
     beds: false,
     ICU: false,
+    plasma: false
   });
 
   const [cities, setCities] = React.useState({
@@ -59,7 +60,7 @@ function App() {
     }else if(citiesString.length === 0){
       alert("Please Select A City First!");
     }else{
-      alert("These resources 𝗮𝗿𝗲 𝗻𝗼𝘁 verified by the software of the developer(s) of this software. 𝗣𝗹𝗲𝗮𝘀𝗲 𝗯𝗲𝘄𝗮𝗿𝗲 𝗼𝗳 𝘀𝗰𝗮𝗺𝘀!");
+      alert("These resources 𝗮𝗿𝗲 𝗻𝗼𝘁 verified by the software or the developer(s) of this software. 𝗣𝗹𝗲𝗮𝘀𝗲 𝗯𝗲𝘄𝗮𝗿𝗲 𝗼𝗳 𝘀𝗰𝗮𝗺𝘀!");
       const twitterQueryString = `https://twitter.com/search?q=verified%20${citiesString}(${resourcesString})%20-need%20-needed%20-required&src=typed_query&f=live`;
       window.open(`${twitterQueryString}`, "_blank");
     }
