@@ -18,6 +18,10 @@ function App() {
     pune: false,
     nashik: false,
     mumbai: false,
+    delhi: false,
+    bengaluru: false,
+    nagpur: false,
+    lucknow: false
   });
 
   const filter = (state) =>{
