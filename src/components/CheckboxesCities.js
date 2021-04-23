@@ -34,6 +34,8 @@ export default function CheckboxesCities(props) {
     nagpur,
     lucknow,
     indore,
+    hyderabad,
+    chennai
   } = props.state;
 
   return (
@@ -115,6 +117,26 @@ export default function CheckboxesCities(props) {
               />
             }
             label="Indore"
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={hyderabad}
+                onChange={handleChange}
+                name="hyderabad"
+              />
+            }
+            label="Hyderabad"
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={chennai}
+                onChange={handleChange}
+                name="chennai"
+              />
+            }
+            label="Chennai"
           />
         </FormGroup>
       </FormControl>
