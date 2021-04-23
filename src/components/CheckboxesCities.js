@@ -1,14 +1,14 @@
-import { makeStyles } from '@material-ui/core/styles';
-import FormControl from '@material-ui/core/FormControl';
-import FormGroup from '@material-ui/core/FormGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
+import { makeStyles } from "@material-ui/core/styles";
+import FormControl from "@material-ui/core/FormControl";
+import FormGroup from "@material-ui/core/FormGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Checkbox from "@material-ui/core/Checkbox";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center'
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
   formControl: {
     margin: theme.spacing(0),
@@ -19,42 +19,102 @@ export default function CheckboxesCities(props) {
   const classes = useStyles();
 
   const handleChange = (event) => {
-    props.setState({ ...props.state, [event.target.name]: event.target.checked });
+    props.setState({
+      ...props.state,
+      [event.target.name]: event.target.checked,
+    });
   };
 
-  const { pune, nashik, mumbai, delhi, bengaluru, nagpur, lucknow } = props.state;
+  const {
+    pune,
+    nashik,
+    mumbai,
+    delhi,
+    bengaluru,
+    nagpur,
+    lucknow,
+    indore,
+  } = props.state;
 
   return (
     <div className={classes.root}>
-      <FormControl required component="fieldset" className={classes.formControl}>
+      <FormControl
+        required
+        component="fieldset"
+        className={classes.formControl}
+      >
         <FormGroup>
           <FormControlLabel
-            control={<Checkbox checked={pune} onChange={handleChange} name="pune" />}
+            control={
+              <Checkbox checked={pune} onChange={handleChange} name="pune" />
+            }
             label="Pune"
           />
           <FormControlLabel
-            control={<Checkbox checked={nashik} onChange={handleChange} name="nashik" />}
+            control={
+              <Checkbox
+                checked={nashik}
+                onChange={handleChange}
+                name="nashik"
+              />
+            }
             label="Nashik"
           />
           <FormControlLabel
-            control={<Checkbox checked={mumbai} onChange={handleChange} name="mumbai" />}
+            control={
+              <Checkbox
+                checked={mumbai}
+                onChange={handleChange}
+                name="mumbai"
+              />
+            }
             label="Mumbai"
           />
           <FormControlLabel
-            control={<Checkbox checked={delhi} onChange={handleChange} name="delhi" />}
+            control={
+              <Checkbox checked={delhi} onChange={handleChange} name="delhi" />
+            }
             label="Delhi"
           />
           <FormControlLabel
-            control={<Checkbox checked={bengaluru} onChange={handleChange} name="bengaluru" />}
+            control={
+              <Checkbox
+                checked={bengaluru}
+                onChange={handleChange}
+                name="bengaluru"
+              />
+            }
             label="Bengaluru"
           />
           <FormControlLabel
-            control={<Checkbox checked={nagpur} onChange={handleChange} name="nagpur" />}
+            control={
+              <Checkbox
+                checked={nagpur}
+                onChange={handleChange}
+                name="nagpur"
+              />
+            }
             label="Nagpur"
           />
           <FormControlLabel
-            control={<Checkbox checked={lucknow} onChange={handleChange} name="lucknow" />}
+            control={
+              <Checkbox
+                checked={lucknow}
+                onChange={handleChange}
+                name="lucknow"
+              />
+            }
             label="Lucknow"
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={indore}
+                onChange={handleChange}
+                name="indore"
+              />
+            }
+            label="Indore"
           />
         </FormGroup>
       </FormControl>
