@@ -22,7 +22,7 @@ export default function CheckboxesCities(props) {
     props.setState({ ...props.state, [event.target.name]: event.target.checked });
   };
 
-  const { pune, nashik, mumbai } = props.state;
+  const { pune, nashik, mumbai, delhi, bengaluru, nagpur, lucknow } = props.state;
 
   return (
     <div className={classes.root}>
@@ -39,6 +39,22 @@ export default function CheckboxesCities(props) {
           <FormControlLabel
             control={<Checkbox checked={mumbai} onChange={handleChange} name="mumbai" />}
             label="Mumbai"
+          />
+          <FormControlLabel
+            control={<Checkbox checked={delhi} onChange={handleChange} name="delhi" />}
+            label="Delhi"
+          />
+          <FormControlLabel
+            control={<Checkbox checked={bengaluru} onChange={handleChange} name="bengaluru" />}
+            label="Bengaluru"
+          />
+          <FormControlLabel
+            control={<Checkbox checked={nagpur} onChange={handleChange} name="nagpur" />}
+            label="Nagpur"
+          />
+          <FormControlLabel
+            control={<Checkbox checked={lucknow} onChange={handleChange} name="lucknow" />}
+            label="Lucknow"
           />
         </FormGroup>
       </FormControl>
