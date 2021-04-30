@@ -11,7 +11,8 @@ function App() {
     oxygen: false,
     beds: false,
     ICU: false,
-    plasma: false
+    plasma: false,
+    remdesivir: false
   });
 
   const [cities, setCities] = React.useState({
