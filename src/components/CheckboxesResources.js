@@ -22,7 +22,7 @@ export default function CheckboxesResources(props) {
     props.setState({ ...props.state, [event.target.name]: event.target.checked });
   };
 
-  const { oxygen, beds, ICU, plasma } = props.state;
+  const { oxygen, beds, ICU, plasma, remdesivir } = props.state;
 
   return (
     <div className={classes.root}>
@@ -43,6 +43,10 @@ export default function CheckboxesResources(props) {
           <FormControlLabel
             control={<Checkbox checked={plasma} onChange={handleChange} name="plasma" />}
             label="Plasma"
+          />
+          <FormControlLabel
+            control={<Checkbox checked={remdesivir} onChange={handleChange} name="remdesivir" />}
+            label="Remdesivir"
           />
         </FormGroup>
       </FormControl>
