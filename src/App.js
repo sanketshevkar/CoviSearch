@@ -25,7 +25,8 @@ function App() {
     lucknow: false,
     indore: false,
     hyderabad: false,
-    chennai: false
+    chennai: false,
+    haryana: false 
   });
 
   const filter = (state) =>{
